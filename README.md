@@ -6,7 +6,7 @@ A different way to write GraphQL queries.
 
 Normally, you do something like:
 
-```
+```javascript
 graqphlClient.execute({
   query: `query($id: String!, $orderBy: FriendOrderBy) {
     user(id: $id) {
@@ -26,7 +26,7 @@ graqphlClient.execute({
 
 With figql, you combine the query and variables with a little magic (and the fact the schema is known):
 
-```
+```javascript
 const { FigqlParser } = require("figql")
 
 const schema = fetchSchema() // TODO if bundled http client could get from graphql endpoint
